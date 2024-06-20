@@ -13,7 +13,7 @@ TEST(Statistics, ReportsAverageMinMax) {
 
 TEST(Statistics, AverageNaNForEmpty) {
     auto computedStats = Statistics::ComputeStatistics({});
-    EXPECT_TRUE(isnan(computedStats.average));
-    EXPECT_TRUE(isnan(computedStats.max));
-    EXPECT_TRUE(isnan(computedStats.min));
+    EXPECT_TRUE(std::isnan(computedStats.average));
+    EXPECT_TRUE(std::isnan(computedStats.max));
+    EXPECT_TRUE(std::isnan(computedStats.min));
 }
